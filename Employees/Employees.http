@@ -1,0 +1,28 @@
+@Employees_HostAddress = https://localhost:7096
+
+GET {{Employees_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{Employees_HostAddress}}/api/employees
+
+###
+
+@id=3
+GET {{Employees_HostAddress}}/api/employees/{{id}}
+
+###
+
+PUT {{Employees_HostAddress}}/api/employees/{{id}}
+Content-Type: application/json
+
+{
+  //Employee
+}
+
+###
+
+DELETE {{Employees_HostAddress}}/api/employees/{Id}?id={{id}}
+
+###
