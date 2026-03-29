@@ -18,7 +18,7 @@ namespace Employees.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllEmployees()
+        public IActionResult GetAllEmployees()
         { 
             var response = _context.Employees.Select(e => new EmployeeResponseDto
             {
